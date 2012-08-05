@@ -10,7 +10,6 @@
 
 @interface GvaView : UIView
 @property (nonatomic) NSInteger functionAreaLabel;
-@property (nonatomic,retain) NSMutableArray *buttons;
 
 - (void)functionLabelSelected:(NSString *)label;
 

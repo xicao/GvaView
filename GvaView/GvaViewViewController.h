@@ -10,6 +10,7 @@
 
 @interface GvaViewViewController : UIViewController
 
+@property (nonatomic,retain) NSMutableArray *buttons;
 @property (nonatomic) int functionLabelNotifier;
 
 @end

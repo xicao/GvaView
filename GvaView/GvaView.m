@@ -21,7 +21,7 @@
 #define FUNCTION_LABEL_GAP          92
 
 #define COMMON_TASK_LABEL           CGRectMake(146.5,600-CALIBRATION,87,52)
-#define COMMON_TASK_LABEL_GAP       92
+#define COMMON_TASK_LABEL_GAP       FUNCTION_LABEL_GAP
 
 #define RECONFIGURABEL_BUTTON_LEFT  CGRectMake(66,185-CALIBRATION,63,60)
 #define RECONFIGURABEL_BUTTON_RIGHT CGRectMake(895,185-CALIBRATION,63,60)
@@ -57,15 +57,6 @@
 @implementation GvaView
 
 @synthesize functionAreaLabel = _functionAreaLabel;
-@synthesize buttons = _buttons;
-
-- (NSMutableArray *)buttons {
-    if (!_buttons) {
-        _buttons = [[NSMutableArray alloc] initWithCapacity:28];
-    }
-    
-    return _buttons;
-}
 
 - (void)setup {
     self.contentMode = UIViewContentModeRedraw;
@@ -171,39 +162,6 @@
         
         [self addSubview:label];
         commonTaskLabel.origin.x += COMMON_TASK_LABEL_GAP;
-    }
-    
-    // draw buttons
-    NSArray *buttonText = [NSArray arrayWithObjects:@"F1",@"F2",@"F3",@"F4",@"F5",@"F6",@"F7",@"F8",@"F9",@"F10",@"F11",@"F12",@"F13",@"F14",@"F15",@"F16",@"F17",@"F18",@"F19",@"F20"@"SA",@"WPN",@"DEF",@"SYS",@"DRV",@"STR",@"COM",@"BMS",nil];
-    
-    CGRect reconfigurabelButtonLeft  = RECONFIGURABEL_BUTTON_LEFT;
-    CGRect reconfigurabelButtonRight = RECONFIGURABEL_BUTTON_RIGHT;
-    for (int i = 0; i < 6; i++) {
-        UIButton *buttonLeft  = [[UIButton alloc] initWithFrame:reconfigurabelButtonLeft];
-        UIButton *buttonRight = [[UIButton alloc] initWithFrame:reconfigurabelButtonRight];
-        
-        [buttonLeft setBackgroundColor:[UIColor blackColor]];
-        [buttonRight setBackgroundColor:[UIColor blackColor]];
-        if ([[buttonText objectAtIndex:i] isKindOfClass:[NSString class]] &&
-            [[buttonText objectAtIndex:(i + 6)] isKindOfClass:[NSString class]]) {
-            
-            [buttonLeft setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [buttonLeft setTitle:(NSString *)[buttonText objectAtIndex:i] forState:UIControlStateNormal];
-            buttonLeft.titleLabel.font = [UIFont fontWithName:@"Helvetica" size: 35.0];
-            
-            [buttonRight setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [buttonRight setTitle:(NSString *)[buttonText objectAtIndex:(i + 6)] forState:UIControlStateNormal];
-            buttonRight.titleLabel.font = [UIFont fontWithName:@"Helvetica" size: 35.0];
-        }
-        
-        [self addSubview:buttonLeft];
-        reconfigurabelButtonLeft.origin.y += RECONFIGURABEL_BUTTON_GAP;
-        [self addSubview:buttonRight];
-        reconfigurabelButtonRight.origin.y += RECONFIGURABEL_BUTTON_GAP;
-    }
-    
-    for (int i = 0; i < 8; i++) {
-        
     }
     
     // draw a GUI and a compass
