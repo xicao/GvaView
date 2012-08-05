@@ -50,10 +50,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-//    for (int i = 20; i < 28; i++) {
-//        [(UIButton *)[self.gvaView.buttons objectAtIndex:i] addTarget:self action:@selector(functionalAreaSelectionButtonsPressed:) forControlEvents:UIControlEventTouchUpInside];
-//    }
 }
 
 - (void)viewDidUnload {
@@ -122,6 +118,7 @@
             [buttonUp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [buttonUp setTitle:(NSString *)[buttonText objectAtIndex:(i + 20)] forState:UIControlStateNormal];
             buttonUp.titleLabel.font = [UIFont fontWithName:@"Helvetica" size: 27.0];
+            [buttonUp addTarget:self action:@selector(functionalAreaSelectionButtonsPressed:) forControlEvents:UIControlEventTouchUpInside];
             
             [buttonDown setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [buttonDown setTitle:(NSString *)[buttonText objectAtIndex:(i + 12)] forState:UIControlStateNormal];

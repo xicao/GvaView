@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GvaView : UIView
+
 @property (nonatomic) NSInteger functionAreaLabel;
 
 - (void)functionLabelSelected:(NSString *)label;
