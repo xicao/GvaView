@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EBA36C315CC0E7C002AA70A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBA36C215CC0E7C002AA70A /* UIKit.framework */; };
+		1EBA36C515CC0E7C002AA70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBA36C415CC0E7C002AA70A /* Foundation.framework */; };
+		1EBA36C715CC0E7C002AA70A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBA36C615CC0E7C002AA70A /* CoreGraphics.framework */; };
+		1EBA36CD15CC0E7C002AA70A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA36CB15CC0E7C002AA70A /* InfoPlist.strings */; };
+		1EBA36CF15CC0E7C002AA70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36CE15CC0E7C002AA70A /* main.m */; };
+		1EBA36D315CC0E7C002AA70A /* GvaViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36D215CC0E7C002AA70A /* GvaViewAppDelegate.m */; };
+		1EBA36D615CC0E7C002AA70A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA36D415CC0E7C002AA70A /* MainStoryboard.storyboard */; };
+		1EBA36D915CC0E7C002AA70A /* GvaViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36D815CC0E7C002AA70A /* GvaViewViewController.m */; };
+		1EBA36E515CD3C52002AA70A /* GvaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36E415CD3C52002AA70A /* GvaView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1EBA36BE15CC0E7C002AA70A /* GvaView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GvaView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBA36C215CC0E7C002AA70A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1EBA36C415CC0E7C002AA70A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1EBA36C615CC0E7C002AA70A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1EBA36CA15CC0E7C002AA70A /* GvaView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GvaView-Info.plist"; sourceTree = "<group>"; };
+		1EBA36CC15CC0E7C002AA70A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1EBA36CE15CC0E7C002AA70A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1EBA36D015CC0E7C002AA70A /* GvaView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GvaView-Prefix.pch"; sourceTree = "<group>"; };
+		1EBA36D115CC0E7C002AA70A /* GvaViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GvaViewAppDelegate.h; sourceTree = "<group>"; };
+		1EBA36D215CC0E7C002AA70A /* GvaViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GvaViewAppDelegate.m; sourceTree = "<group>"; };
+		1EBA36D515CC0E7C002AA70A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1EBA36D715CC0E7C002AA70A /* GvaViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GvaViewViewController.h; sourceTree = "<group>"; };
+		1EBA36D815CC0E7C002AA70A /* GvaViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GvaViewViewController.m; sourceTree = "<group>"; };
+		1EBA36E315CD3C52002AA70A /* GvaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GvaView.h; sourceTree = "<group>"; };
+		1EBA36E415CD3C52002AA70A /* GvaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GvaView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EBA36BB15CC0E7C002AA70A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBA36C315CC0E7C002AA70A /* UIKit.framework in Frameworks */,
+				1EBA36C515CC0E7C002AA70A /* Foundation.framework in Frameworks */,
+				1EBA36C715CC0E7C002AA70A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EBA36B315CC0E7C002AA70A = {
+			isa = PBXGroup;
+			children = (
+				1EBA36C815CC0E7C002AA70A /* GvaView */,
+				1EBA36C115CC0E7C002AA70A /* Frameworks */,
+				1EBA36BF15CC0E7C002AA70A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EBA36BF15CC0E7C002AA70A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EBA36BE15CC0E7C002AA70A /* GvaView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EBA36C115CC0E7C002AA70A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EBA36C215CC0E7C002AA70A /* UIKit.framework */,
+				1EBA36C415CC0E7C002AA70A /* Foundation.framework */,
+				1EBA36C615CC0E7C002AA70A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EBA36C815CC0E7C002AA70A /* GvaView */ = {
+			isa = PBXGroup;
+			children = (
+				1EBA36D115CC0E7C002AA70A /* GvaViewAppDelegate.h */,
+				1EBA36D215CC0E7C002AA70A /* GvaViewAppDelegate.m */,
+				1EBA36D415CC0E7C002AA70A /* MainStoryboard.storyboard */,
+				1EBA36E315CD3C52002AA70A /* GvaView.h */,
+				1EBA36E415CD3C52002AA70A /* GvaView.m */,
+				1EBA36D715CC0E7C002AA70A /* GvaViewViewController.h */,
+				1EBA36D815CC0E7C002AA70A /* GvaViewViewController.m */,
+				1EBA36C915CC0E7C002AA70A /* Supporting Files */,
+			);
+			path = GvaView;
+			sourceTree = "<group>";
+		};
+		1EBA36C915CC0E7C002AA70A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EBA36CA15CC0E7C002AA70A /* GvaView-Info.plist */,
+				1EBA36CB15CC0E7C002AA70A /* InfoPlist.strings */,
+				1EBA36CE15CC0E7C002AA70A /* main.m */,
+				1EBA36D015CC0E7C002AA70A /* GvaView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EBA36BD15CC0E7C002AA70A /* GvaView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EBA36DC15CC0E7C002AA70A /* Build configuration list for PBXNativeTarget "GvaView" */;
+			buildPhases = (
+				1EBA36BA15CC0E7C002AA70A /* Sources */,
+				1EBA36BB15CC0E7C002AA70A /* Frameworks */,
+				1EBA36BC15CC0E7C002AA70A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GvaView;
+			productName = GvaView;
+			productReference = 1EBA36BE15CC0E7C002AA70A /* GvaView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EBA36B515CC0E7C002AA70A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GvaView;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = xic;
+			};
+			buildConfigurationList = 1EBA36B815CC0E7C002AA70A /* Build configuration list for PBXProject "GvaView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1EBA36B315CC0E7C002AA70A;
+			productRefGroup = 1EBA36BF15CC0E7C002AA70A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EBA36BD15CC0E7C002AA70A /* GvaView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EBA36BC15CC0E7C002AA70A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBA36CD15CC0E7C002AA70A /* InfoPlist.strings in Resources */,
+				1EBA36D615CC0E7C002AA70A /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EBA36BA15CC0E7C002AA70A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBA36CF15CC0E7C002AA70A /* main.m in Sources */,
+				1EBA36D315CC0E7C002AA70A /* GvaViewAppDelegate.m in Sources */,
+				1EBA36D915CC0E7C002AA70A /* GvaViewViewController.m in Sources */,
+				1EBA36E515CD3C52002AA70A /* GvaView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1EBA36CB15CC0E7C002AA70A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EBA36CC15CC0E7C002AA70A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1EBA36D415CC0E7C002AA70A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EBA36D515CC0E7C002AA70A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EBA36DA15CC0E7C002AA70A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1EBA36DB15CC0E7C002AA70A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EBA36DD15CC0E7C002AA70A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GvaView/GvaView-Prefix.pch";
+				INFOPLIST_FILE = "GvaView/GvaView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1EBA36DE15CC0E7C002AA70A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GvaView/GvaView-Prefix.pch";
+				INFOPLIST_FILE = "GvaView/GvaView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EBA36B815CC0E7C002AA70A /* Build configuration list for PBXProject "GvaView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBA36DA15CC0E7C002AA70A /* Debug */,
+				1EBA36DB15CC0E7C002AA70A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EBA36DC15CC0E7C002AA70A /* Build configuration list for PBXNativeTarget "GvaView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBA36DD15CC0E7C002AA70A /* Debug */,
+				1EBA36DE15CC0E7C002AA70A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EBA36B515CC0E7C002AA70A /* Project object */;
+}
