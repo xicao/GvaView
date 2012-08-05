@@ -12,20 +12,24 @@
 
 #define CALIBRATION                 20
 
-#define STATUS_ALERM_BAR            CGRectMake(144,113-CALIBRATION,740,11)
-#define STATUS_INFORMATION_BAR      CGRectMake(144,113-CALIBRATION,740,65)
+#define STATUS_ALERM_BAR            CGRectMake(142,113-CALIBRATION,740,11)
+#define STATUS_INFORMATION_BAR      CGRectMake(142,113-CALIBRATION,740,65)
 
-#define MAIN_DISPLAY_AREA           CGRectMake(144,178-CALIBRATION,740,495)
+#define MAIN_DISPLAY_AREA           CGRectMake(142,178-CALIBRATION,740,495)
 
-#define FUNCTION_LABEL              CGRectMake(159.5,113-CALIBRATION,65,11)
+#define FUNCTION_LABEL              CGRectMake(157.5,113-CALIBRATION,65,11)
 #define FUNCTION_LABEL_GAP          92
 
-#define COMMON_TASK_LABEL           CGRectMake(148.5,600-CALIBRATION,87,52)
+#define COMMON_TASK_LABEL           CGRectMake(146.5,600-CALIBRATION,87,52)
 #define COMMON_TASK_LABEL_GAP       92
 
-#define RECONFIGURABEL_LABEL_LEFT   CGRectMake(148.5,185-CALIBRATION,100,60)
-#define RECONFIGURABEL_LABEL_RIGHT  CGRectMake(779.5,185-CALIBRATION,100,60)
-#define RECONFIGURABEL_LABEL_GAP    68
+#define RECONFIGURABEL_BUTTON_LEFT  CGRectMake(66,185-CALIBRATION,63,60)
+#define RECONFIGURABEL_BUTTON_RIGHT CGRectMake(895,185-CALIBRATION,63,60)
+#define RECONFIGURABEL_BUTTON_GAP   68
+
+#define RECONFIGURABEL_LABEL_LEFT   CGRectMake(146.5,185-CALIBRATION,100,60)
+#define RECONFIGURABEL_LABEL_RIGHT  CGRectMake(777.5,185-CALIBRATION,100,60)
+#define RECONFIGURABEL_LABEL_GAP    RECONFIGURABEL_BUTTON_GAP
 
 #pragma mark - name of labels
 
@@ -35,13 +39,13 @@
 #define F4 @""
 #define F5 @""
 #define F6 @""
-#define F7 @"7"
+#define F7 @""
 #define F8 @""
 #define F9 @""
 #define F10 @""
 #define F11 @""
 #define F12 @""
-#define F13 @"13"
+#define F13 @""
 #define F14 @""
 #define F15 @""
 #define F16 @""
@@ -53,6 +57,15 @@
 @implementation GvaView
 
 @synthesize functionAreaLabel = _functionAreaLabel;
+@synthesize buttons = _buttons;
+
+- (NSMutableArray *)buttons {
+    if (!_buttons) {
+        _buttons = [[NSMutableArray alloc] initWithCapacity:28];
+    }
+    
+    return _buttons;
+}
 
 - (void)setup {
     self.contentMode = UIViewContentModeRedraw;
@@ -121,7 +134,6 @@
     
     CGRect frame1 = RECONFIGURABEL_LABEL_LEFT;
     CGRect frame2 = RECONFIGURABEL_LABEL_RIGHT;
-    
     for (int i = 0; i < 6; i++) {
         UILabel *label1 = [[UILabel alloc] initWithFrame:frame1];
         UILabel *label2 = [[UILabel alloc] initWithFrame:frame2];
@@ -130,6 +142,7 @@
         [label2 setBackgroundColor:[UIColor greenColor]];
         if ([[labelText objectAtIndex:i] isKindOfClass:[NSString class]] &&
             [[labelText objectAtIndex:(i + 6)] isKindOfClass:[NSString class]]) {
+            
             [label1 setFont:[UIFont fontWithName:@"Courier" size: 20.0]];
             [label1 setTextAlignment:UITextAlignmentCenter];
             [label1 setText:(NSString *)[labelText objectAtIndex:i]];
@@ -161,6 +174,37 @@
     }
     
     // draw buttons
+    NSArray *buttonText = [NSArray arrayWithObjects:@"F1",@"F2",@"F3",@"F4",@"F5",@"F6",@"F7",@"F8",@"F9",@"F10",@"F11",@"F12",@"F13",@"F14",@"F15",@"F16",@"F17",@"F18",@"F19",@"F20"@"SA",@"WPN",@"DEF",@"SYS",@"DRV",@"STR",@"COM",@"BMS",nil];
+    
+    CGRect reconfigurabelButtonLeft  = RECONFIGURABEL_BUTTON_LEFT;
+    CGRect reconfigurabelButtonRight = RECONFIGURABEL_BUTTON_RIGHT;
+    for (int i = 0; i < 6; i++) {
+        UIButton *buttonLeft  = [[UIButton alloc] initWithFrame:reconfigurabelButtonLeft];
+        UIButton *buttonRight = [[UIButton alloc] initWithFrame:reconfigurabelButtonRight];
+        
+        [buttonLeft setBackgroundColor:[UIColor blackColor]];
+        [buttonRight setBackgroundColor:[UIColor blackColor]];
+        if ([[buttonText objectAtIndex:i] isKindOfClass:[NSString class]] &&
+            [[buttonText objectAtIndex:(i + 6)] isKindOfClass:[NSString class]]) {
+            
+            [buttonLeft setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [buttonLeft setTitle:(NSString *)[buttonText objectAtIndex:i] forState:UIControlStateNormal];
+            buttonLeft.titleLabel.font = [UIFont fontWithName:@"Helvetica" size: 35.0];
+            
+            [buttonRight setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [buttonRight setTitle:(NSString *)[buttonText objectAtIndex:(i + 6)] forState:UIControlStateNormal];
+            buttonRight.titleLabel.font = [UIFont fontWithName:@"Helvetica" size: 35.0];
+        }
+        
+        [self addSubview:buttonLeft];
+        reconfigurabelButtonLeft.origin.y += RECONFIGURABEL_BUTTON_GAP;
+        [self addSubview:buttonRight];
+        reconfigurabelButtonRight.origin.y += RECONFIGURABEL_BUTTON_GAP;
+    }
+    
+    for (int i = 0; i < 8; i++) {
+        
+    }
     
     // draw a GUI and a compass
 }

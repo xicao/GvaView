@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface GvaView : UIView
-@property NSInteger functionAreaLabel;
+@property (nonatomic) NSInteger functionAreaLabel;
+@property (nonatomic,retain) NSMutableArray *buttons;
 
 - (void)functionLabelSelected:(NSString *)label;
 
