@@ -29,14 +29,14 @@
 
 @synthesize functionLabelNotifier = _functionLabelNotifier;
 @synthesize gvaView = _gvaView;
-@synthesize buttons = _buttons;
 
-- (NSMutableArray *)buttons {
-    if (!_buttons) {
-        _buttons = [[NSMutableArray alloc] initWithCapacity:28];
-    }
-    
-    return _buttons;
+
+
+# pragma mark - Button methods
+
+- (void)functionalAreaSelectionButtonsPressed:(UIButton *)sender {
+    // highlight current functional area label
+    [self.gvaView functionLabelSelected:sender.currentTitle];
 }
 
 # pragma mark - View Methods
@@ -59,11 +59,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);// only support landscape
-}
-
-- (void)functionalAreaSelectionButtonsPressed:(UIButton *)sender {
-    // highlight current functional area label
-    [self.gvaView functionLabelSelected:sender.currentTitle];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -96,12 +91,9 @@
         
         [self.gvaView addSubview:buttonLeft];
         reconfigurabelButtonLeft.origin.y += RECONFIGURABEL_BUTTON_GAP;
-        [self.buttons addObject:buttonLeft];
         
         [self.gvaView addSubview:buttonRight];
         reconfigurabelButtonRight.origin.y += RECONFIGURABEL_BUTTON_GAP;
-        [self.buttons addObject:buttonRight];
-        
     }
     
     CGRect functionButton   = FUNCTION_BUTTON;
@@ -128,11 +120,9 @@
         
         [self.gvaView addSubview:buttonDown];
         commonTaskButton.origin.x += COMMON_TASK_BUTTON_GAP;
-        [self.buttons addObject:buttonDown];
         
         [self.gvaView addSubview:buttonUp];
         functionButton.origin.x += FUNCTION_BUTTON_GAP;
-        [self.buttons addObject:buttonUp];
     }
 }
 
