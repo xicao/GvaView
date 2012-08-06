@@ -14,8 +14,8 @@
 		1EBA36CF15CC0E7C002AA70A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36CE15CC0E7C002AA70A /* main.m */; };
 		1EBA36D315CC0E7C002AA70A /* GvaViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36D215CC0E7C002AA70A /* GvaViewAppDelegate.m */; };
 		1EBA36D615CC0E7C002AA70A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBA36D415CC0E7C002AA70A /* MainStoryboard.storyboard */; };
-		1EBA36D915CC0E7C002AA70A /* GvaViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36D815CC0E7C002AA70A /* GvaViewViewController.m */; };
 		1EBA36E515CD3C52002AA70A /* GvaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA36E415CD3C52002AA70A /* GvaView.m */; };
+		1EEB5BBE15CF41C20021B155 /* GvaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB5BBD15CF41C20021B155 /* GvaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		1EBA36D115CC0E7C002AA70A /* GvaViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GvaViewAppDelegate.h; sourceTree = "<group>"; };
 		1EBA36D215CC0E7C002AA70A /* GvaViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GvaViewAppDelegate.m; sourceTree = "<group>"; };
 		1EBA36D515CC0E7C002AA70A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1EBA36D715CC0E7C002AA70A /* GvaViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GvaViewViewController.h; sourceTree = "<group>"; };
-		1EBA36D815CC0E7C002AA70A /* GvaViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GvaViewViewController.m; sourceTree = "<group>"; };
+		1EBA36D715CC0E7C002AA70A /* GvaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GvaViewController.h; sourceTree = "<group>"; };
 		1EBA36E315CD3C52002AA70A /* GvaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GvaView.h; sourceTree = "<group>"; };
 		1EBA36E415CD3C52002AA70A /* GvaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GvaView.m; sourceTree = "<group>"; };
+		1EEB5BBD15CF41C20021B155 /* GvaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GvaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 				1EBA36D415CC0E7C002AA70A /* MainStoryboard.storyboard */,
 				1EBA36E315CD3C52002AA70A /* GvaView.h */,
 				1EBA36E415CD3C52002AA70A /* GvaView.m */,
-				1EBA36D715CC0E7C002AA70A /* GvaViewViewController.h */,
-				1EBA36D815CC0E7C002AA70A /* GvaViewViewController.m */,
+				1EBA36D715CC0E7C002AA70A /* GvaViewController.h */,
+				1EEB5BBD15CF41C20021B155 /* GvaViewController.m */,
 				1EBA36C915CC0E7C002AA70A /* Supporting Files */,
 			);
 			path = GvaView;
@@ -169,8 +169,8 @@
 			files = (
 				1EBA36CF15CC0E7C002AA70A /* main.m in Sources */,
 				1EBA36D315CC0E7C002AA70A /* GvaViewAppDelegate.m in Sources */,
-				1EBA36D915CC0E7C002AA70A /* GvaViewViewController.m in Sources */,
 				1EBA36E515CD3C52002AA70A /* GvaView.m in Sources */,
+				1EEB5BBE15CF41C20021B155 /* GvaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +288,7 @@
 				1EBA36DE15CC0E7C002AA70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 xic. All rights reserved.
 //
 
-#import "GvaViewViewController.h"
+#import "GvaViewController.h"
 #import "GvaView.h"
 
 #define CALIBRATION                 20
